@@ -13,5 +13,5 @@ MEGA_LIB = -L/usr/local/lib -lmega
 all:
 	rm -rf *.o camera_pi
 	g++ $(MEGA_INC) -c megacli.cpp -o megacli.o
-	g++ $(OPENCV_INC) $(MEGA_INC) -c camera.cpp megacli.o -o camera.o
+	g++ $(OPENCV_INC) $(MEGA_INC) -c camera.cpp -o camera.o
 	g++ $(OPENCV_LIB) $(MEGA_LIB) -o camera_pi camera.o megacli.o
