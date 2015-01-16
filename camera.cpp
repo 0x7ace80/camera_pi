@@ -78,6 +78,15 @@ double average(const double* vector, unsigned long size) {
 
 int main(int argc, char** argv)
 {
+    if (argc != 3)
+    {
+        std::cout << "Unexpected input parameters. The correct command should like this:\ncamera_pi myemail@some.com mega_acount@some.com mega_password\n"<<std::endl;
+    }
+
+    char* email = argv[1];
+    char* mega_acount = argv[2];
+    char* mega_password = argv[3];
+
     CvCapture* pCapture = cvCreateCameraCapture(-1);
     if (!pCapture)
     {
@@ -85,7 +94,7 @@ int main(int argc, char** argv)
         return 0;
     }
     
-    cv::namedWindow("Camera", CV_WINDOW_NORMAL);
+//    cv::namedWindow("Camera", CV_WINDOW_NORMAL);
     
     bool isRefImageSet = false;
     std::vector<double> img_diff;
@@ -128,9 +137,9 @@ int main(int argc, char** argv)
                 std::string filename = getDateString() + std::string(".jpg");
                 cv::imwrite(filename.c_str(), cur_img);
                 // Send notification mail
-                sendmail("future_wei@qq.com", "camera@pi", "Camera notification", "The camera have detected something strange.\n");
+                sendmail(email, "camera@pi", "Camera notification", "The camera have detected something strange.\n");
                 // Upload image to Mega
-                loginAndUploadFile("sunnyfuture@gmail.com", "cxw@2623810", filename.c_str());
+                loginAndUploadFile(mega_acount, mega_password, filename.c_str());
             }
         }
         
