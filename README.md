@@ -7,9 +7,11 @@ The camera code will calculate compare current frame from camera and compare it 
 Dependency:
 
 For opencv on raspberry pi.
+
 sudo apt-get install libopencv-dev
 
 For mega sdk.
+
 https://github.com/meganz/sdk
 
 and the mega sdk requires the following libraries.
@@ -30,5 +32,3 @@ sudo apt-get install libfreeimage-dev.
 
 
 If everything goes well just execute make at root dir.
-
-
