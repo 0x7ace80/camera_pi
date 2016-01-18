@@ -1432,5 +1432,5 @@ void loginAndUploadFile(const char* User, const char* Password, const char* File
 
 // int main()
 // {
-//     loginAndUploadFile("sunnyfuture@gmail.com", "cxw@2623810", "/Users/future/process.R");
+//     loginAndUploadFile("email@gmail.com", "password", "filepath");
 // }
