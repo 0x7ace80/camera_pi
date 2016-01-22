@@ -4,15 +4,15 @@ Use mega sdk to upload file to mega cloud storage.
 
 The camera code will calculate compare current frame from camera and compare it with the reference frame. If they are quite different it will send a mail and update the current frame to the mega cloud storage.
 
+User have to provide UserName and Password of the MegaCloud to enable the uploading.
+
 Dependency:
 
 For opencv on raspberry pi.
 
 sudo apt-get install libopencv-dev
 
-For mega sdk.
-
-https://github.com/meganz/sdk
+For mega sdk (refer to  https://github.com/meganz/sdk)
 
 and the mega sdk requires the following libraries.
 
@@ -31,4 +31,4 @@ sudo apt-get install linsqlite3-dev.
 sudo apt-get install libfreeimage-dev.
 
 
-If everything goes well just execute make at root dir.
+If everything goes well, just execute make at root dir.
