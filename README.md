@@ -2,7 +2,7 @@ camera_pi runs on raspberry pi and it detects image changes of the camera.
 Use OpenCV as image processing library.
 Use mega sdk to upload file to mega cloud storage.
 
-The camera code will use OpenCV to calculate compare current frame from camera and compare it with the reference frame. If they are quite different it will send a mail and update the current frame to the mega cloud storage.
+This code will use OpenCV to calculate compare current frame from camera and compare it with the reference frame. If they are quite different it will send a mail and update the current frame to the mega cloud storage.
 
 Users have to provide UserName and Password of the MegaCloud to enable the uploading.
 
