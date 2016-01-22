@@ -19,6 +19,12 @@
  * program.
  */
 
+/**
+ * Note: The function we need to use is:
+ * loginAndUploadFile(const char* UserName, const char* Password, const char* FilePath) 
+ *
+ */
+
 #include "mega.h"
 #include "megacli.h"
 
@@ -1429,8 +1435,3 @@ void loginAndUploadFile(const char* User, const char* Password, const char* File
         }
     }
 }
-
-// int main()
-// {
-//     loginAndUploadFile("email@gmail.com", "password", "filepath");
-// }
